@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vchaudhpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vchaudhpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: vchaudhpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: vchaudhpipelinesjavascriptdocker 
+          image: myregistry2808.azurecr.io/vchaudhpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
